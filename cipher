@@ -25,10 +25,10 @@ int main(int argc, string argv[])
     string key = argv[1];
     for(int i=0;i<strlen(bc);i++){
         if(!(islower(bc[i]))){ // if the input character is uppercase
-            bc[i] = toupper(key[i]);
+            bc[i] = toupper(key[bc[i]-'a');
         }
         else{ // if the input character is lowercase
-            bc[i] = tolower(key[i]);
+            bc[i] = tolower(bc[i]-'A');
         }
         printf("\ncipher text: %s",bc);
         return 0;
