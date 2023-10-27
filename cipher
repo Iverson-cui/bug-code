@@ -22,15 +22,15 @@ int main(int argc, string argv[])
         string bc = get_string("Plaintext: ");
         // get the input
     int input_length = strlen(bc);
-        string after_c[input_length];
+    string key = argv[1];
     for(int i=0;i<strlen(bc);i++){
         if(!(islower(bc[i]))){ // if the input character is uppercase
-            after_c[i] = toupper(argv[1][i]);
+            bc[i] = toupper(key[i]);
         }
         else{ // if the input character is lowercase
-            after_c[i] = tolower(argv[1][i]);
+            bc[i] = tolower(key[i]);
         }
-        printf("\ncipher text: %s",after_c);
+        printf("\ncipher text: %s",bc);
         return 0;
     }
 }
